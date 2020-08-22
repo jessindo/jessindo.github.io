@@ -6,6 +6,7 @@
   "scripts": {
     "pre-build": "node scripts/get-about",
     "build": "yarn pre-build && gatsby build",
+    "deploy": "gatsby build && gh-pages -d public -b master",
     "develop": "yarn pre-build && gatsby develop",
     "start": "yarn develop",
     "clean": "gatsby clean",
