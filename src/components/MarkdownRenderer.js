@@ -20,16 +20,18 @@ const StyledLink = styled.a`
     content: '';
     width: 100%;
     height: 3px;
-    background-color: ${(props) => props.theme.colors.primaryLight};
+    
     transition: all 250ms;
   }
 
   &:hover {
-    color: white;
+    // color: white;
 
     &::after {
-      height: 110%;
-      width: 110%;
+      // height: 110%;
+      // width: 110%;
+      // moved bottom line from &:after
+      background-color: ${(props) => props.theme.colors.primaryLight};
     }
   }
 `;
