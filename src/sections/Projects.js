@@ -7,13 +7,13 @@ import Fade from 'react-reveal/Fade';
 import Section from '../components/Section';
 import { CardContainer, Card } from '../components/Card';
 import SocialLink from '../components/SocialLink';
-import Triangle from '../components/Triangle';
+// import Triangle from '../components/Triangle';
 import ImageSubtitle from '../components/ImageSubtitle';
 import Hide from '../components/Hide';
 
 const Background = () => (
   <div>
-    <Triangle
+    {/* <Triangle
       color="secondaryLight"
       height={['80vh', '80vh']}
       width={['100vw', '100vw']}
@@ -40,7 +40,7 @@ const Background = () => (
       height={['25vh', '20vh']}
       width={['100vw', '100vw']}
       invertY
-    />
+    /> */}
   </div>
 );
 
@@ -53,7 +53,7 @@ const Title = styled(Text)`
   font-weight: 600;
   text-transform: uppercase;
   display: table;
-  border-bottom: ${(props) => props.theme.colors.primary} 5px solid;
+  // border-bottom: ${(props) => props.theme.colors.primary} 5px solid;
 `;
 
 const TextContainer = styled.div`
@@ -134,18 +134,23 @@ const Project = ({
             }}
           >
             <Box mx={1} fontSize={5}>
-              <SocialLink
-                name="Check repository"
-                fontAwesomeIcon="github"
-                url={repositoryUrl}
-              />
+              {repositoryUrl!==null && (
+                <SocialLink
+                  name="Check repository"
+                  fontAwesomeIcon="github"
+                  url={repositoryUrl}
+                />
+              )} 
+          
             </Box>
             <Box mx={1} fontSize={5}>
-              <SocialLink
-                name="See project"
-                fontAwesomeIcon="globe"
-                url={projectUrl}
-              />
+              {projectUrl!==null && (
+                <SocialLink
+                  name="See project"
+                  fontAwesomeIcon="globe"
+                  url={projectUrl}
+                />
+              )} 
             </Box>
           </Flex>
           <ImageSubtitle bg="primary" color="white" y="bottom" x="right" round>
@@ -163,9 +168,9 @@ const Project = ({
 Project.propTypes = {
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  projectUrl: PropTypes.string.isRequired,
-  repositoryUrl: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired,
+  projectUrl: PropTypes.string,
+  repositoryUrl: PropTypes.string,
+  type: PropTypes.string,
   publishedDate: PropTypes.string.isRequired,
   logo: PropTypes.shape({
     image: PropTypes.shape({

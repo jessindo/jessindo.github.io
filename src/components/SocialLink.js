@@ -10,7 +10,7 @@ const IconLink = styled(Link)`
   transition: color 0.5s;
   color: ${(props) =>
     props.theme.colors[props.color] || props.theme.colors.primary};
-  text-decoration: none;
+    text-decoration: none;
 
   &:hover {
     color: ${(props) => props.theme.colors.primaryLight};

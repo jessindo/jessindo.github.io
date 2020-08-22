@@ -5,12 +5,12 @@ import styled from 'styled-components';
 import ReactMarkdown from 'react-markdown';
 import Fade from 'react-reveal/Fade';
 import Section from '../components/Section';
-import Triangle from '../components/Triangle';
+// import Triangle from '../components/Triangle';
 import markdownRenderer from '../components/MarkdownRenderer';
 
 const Background = () => (
   <div>
-    <Triangle
+    {/* <Triangle
       color="secondaryLight"
       height={['50vh', '20vh']}
       width={['50vw', '50vw']}
@@ -28,7 +28,7 @@ const Background = () => (
       color="backgroundDark"
       height={['25vh', '20vh']}
       width={['100vw', '100vw']}
-    />
+    /> */}
   </div>
 );
 
@@ -43,7 +43,7 @@ const ProfilePicture = styled(Image)`
 
 const About = () => (
   <Section.Container id="about" Background={Background}>
-    <Section.Header name="About me" icon="🙋‍♂️" label="person" />
+    {/* <Section.Header name="About me" icon="🙋‍♂️" label="person" /> */}
     <StaticQuery
       query={graphql`
         query AboutMeQuery {
@@ -66,7 +66,8 @@ const About = () => (
         const { aboutMe, profile } = data.contentfulAbout;
         return (
           <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
-            <Box width={[1, 1, 4 / 6]} px={[1, 2, 4]}>
+            <Box width={[1, 1, 3 / 6]} px={[1, 2, 2]}>
+              <Section.Header name="About me" icon="🙋‍♂️" label="person" />
               <Fade bottom>
                 <ReactMarkdown
                   source={aboutMe.childMarkdownRemark.rawMarkdownBody}
@@ -76,8 +77,8 @@ const About = () => (
             </Box>
 
             <Box
-              width={[1, 1, 2 / 6]}
-              style={{ maxWidth: '300px', margin: 'auto' }}
+              width={[1, 1, 3 / 6]}
+              style={{ maxWidth: '350px', paddingTop: '25px'}}
             >
               <Fade right>
                 <ProfilePicture

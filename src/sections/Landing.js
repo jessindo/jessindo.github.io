@@ -6,11 +6,11 @@ import { SectionLink } from 'react-scroll-section';
 import Section from '../components/Section';
 import SocialLink from '../components/SocialLink';
 import MouseIcon from '../components/MouseIcon';
-import Triangle from '../components/Triangle';
+// import Triangle from '../components/Triangle';
 
 const Background = () => (
   <div>
-    <Triangle
+    {/* <Triangle
       color="backgroundDark"
       height={['35vh', '80vh']}
       width={['95vw', '60vw']}
@@ -35,7 +35,7 @@ const Background = () => (
       width={['100vw', '100vw']}
       invertX
       invertY
-    />
+    /> */}
   </div>
 );
 
@@ -73,16 +73,16 @@ const LandingPage = () => (
               textAlign="center"
               as="h1"
               color="primary"
-              fontSize={[6, 7]}
+              fontSize={[5, 6]}
               mb={[3, 4, 5]}
             >
-              {`Hello, I'm ${name}!`}
+              {`Hey, I'm ${name}!`}
             </Heading>
 
             <Heading
               as="h2"
               color="primary"
-              fontSize={[5, 6]}
+              fontSize={[4, 5]}
               mb={[3, 5]}
               textAlign="center"
               style={centerHorizontally}

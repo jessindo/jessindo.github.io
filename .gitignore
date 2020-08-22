@@ -67,3 +67,6 @@ netlify.toml
 .DS_Store
 .vscode/
 about.json
+
+LICENSE
+CONTRIBUTING.md
