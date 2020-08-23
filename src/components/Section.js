@@ -7,7 +7,7 @@ import Slide from 'react-reveal/Slide';
 import LinkAnimated from './LinkAnimated';
 
 const SectionContainer = styled.div`
-  min-height: 100vh;
+  min-height: 85vh;
   min-width: 320px;
   max-width: 1366px;
   display: flex;
@@ -25,10 +25,10 @@ const SectionContainer = styled.div`
 
 const DefaultBackground = () => <div />;
 
-const Container = ({ id, children, Background = DefaultBackground }) => (
-  <Section id={id} style={{ position: 'relative' }}>
+const Container = ({ id, children, height, Background = DefaultBackground }) => (
+  <Section id={id} style={{ position: 'relative'}}>
     <Background />
-    <SectionContainer>{children}</SectionContainer>
+    <SectionContainer style={{minHeight: `${{height}  }!important`}}>{children}</SectionContainer>
   </Section>
 );
 
@@ -36,6 +36,7 @@ Container.propTypes = {
   id: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
   Background: PropTypes.func,
+  height: PropTypes.string
 };
 
 const Header = ({ name, icon = '', label = '' }) => (

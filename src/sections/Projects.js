@@ -50,10 +50,10 @@ const MEDIA_QUERY_SMALL = '@media (max-width: 400px)';
 
 const Title = styled(Text)`
   font-size: 14px;
-  font-weight: 600;
+  font-weight: bold;
   text-transform: uppercase;
   display: table;
-  // border-bottom: ${(props) => props.theme.colors.primary} 5px solid;
+  border-bottom: ${(props) => props.theme.colors.primary} 3px solid;
 `;
 
 const TextContainer = styled.div`
@@ -182,7 +182,7 @@ Project.propTypes = {
 
 const Projects = () => (
   <Section.Container id="projects" Background={Background}>
-    <Section.Header name="Projects" icon="💻" label="notebook" />
+    <Section.Header name="PROJECTS" icon="💻" label="notebook" />
     <StaticQuery
       query={graphql`
         query ProjectsQuery {

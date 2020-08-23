@@ -3,7 +3,7 @@ import Layout from '../components/Layout';
 import Landing from '../sections/Landing';
 import About from '../sections/About';
 import Projects from '../sections/Projects';
-import Writing from '../sections/Writing';
+// import Writing from '../sections/Writing';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -12,7 +12,7 @@ const IndexPage = () => (
     <Header />
     <Landing />
     <About />
-    {/* <Projects /> */}
+    <Projects />
     {/* <Writing /> */}
     <Footer />
   </Layout>

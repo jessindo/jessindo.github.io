@@ -22,13 +22,14 @@ const Background = () => (
       height={['20vh', '40vh']}
       width={['75vw', '70vw']}
       invertX
-    />
+    /> */}
 
-    <Triangle
+    {/* <Triangle
       color="backgroundDark"
       height={['25vh', '20vh']}
       width={['100vw', '100vw']}
     /> */}
+
   </div>
 );
 
@@ -42,7 +43,7 @@ const ProfilePicture = styled(Image)`
 `;
 
 const About = () => (
-  <Section.Container id="about" Background={Background}>
+  <Section.Container height="70vh" id="about" Background={Background}>
     {/* <Section.Header name="About me" icon="🙋‍♂️" label="person" /> */}
     <StaticQuery
       query={graphql`
@@ -67,7 +68,7 @@ const About = () => (
         return (
           <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
             <Box width={[1, 1, 3 / 6]} px={[1, 2, 2]}>
-              <Section.Header name="About me" icon="🙋‍♂️" label="person" />
+              <Section.Header name="ABOUT ME" icon="🙋‍♂️" label="person" />
               <Fade bottom>
                 <ReactMarkdown
                   source={aboutMe.childMarkdownRemark.rawMarkdownBody}

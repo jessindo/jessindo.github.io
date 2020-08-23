@@ -1,6 +1,7 @@
 const colors = require('./colors');
 const about = require('./about.json');
 
+// eslint-disable-next-line import/no-extraneous-dependencies
 require('dotenv').config();
 
 const { ACCESS_TOKEN, SPACE_ID, ANALYTICS_ID, DETERMINISTIC } = process.env;
@@ -10,8 +11,8 @@ const plugins = [
   {
     resolve: 'gatsby-plugin-manifest',
     options: {
-      name: `${about.name} Portfolio`,
-      short_name: `${about.name} Portfolio`,
+      name: `${about.name}`,
+      short_name: `${about.name}`,
       start_url: '/',
       background_color: colors.background,
       theme_color: colors.primary,
