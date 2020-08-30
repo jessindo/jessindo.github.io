@@ -67,7 +67,7 @@ const About = () => (
         const { aboutMe, profile } = data.contentfulAbout;
         return (
           <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
-            <Box width={[1, 1, 2 / 6]} px={[1, 2, 2]}>
+            <Box width={[1, 1, 4 / 6]} px={[1, 2, 2]}>
               <Section.Header name="ABOUT ME" icon="🙋‍♂️" label="person" />
               <Fade bottom>
                 <ReactMarkdown
@@ -78,7 +78,7 @@ const About = () => (
             </Box>
 
             <Box
-              width={[1, 1, 4 / 6]}
+              width={[1, 1, 2 / 6]}
               style={{ maxWidth: '350px', paddingTop: '25px'}}
             >
               <Fade right>
