@@ -67,11 +67,11 @@ const Header = () => (
                 selected={home.isSelected}
                 name="Home"
               />
-              <RouteLink
+              {/* <RouteLink
                 key="Resume"
                 onClick={() => window.open("", "_blank")}
                 name="Resume"
-              />
+              /> */}
             </>
           );
           // home && (
